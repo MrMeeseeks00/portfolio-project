@@ -1,0 +1,96 @@
+.navbar {
+    background-color: $semi-trasparent;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+    position: sticky;
+
+
+    &-brand {
+        font-weight: 500;
+        color: lighten($primary, 10%);
+        font-size: 24px;
+        transition: 0.3s color;
+
+        &:hover {
+            color: darken($primary, 10%);
+        }
+    }
+
+
+    &-toggler {
+        border: none;
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+
+        &-icon {
+            background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 183, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+    }
+
+    .btn-close {
+        color: set-text-color($semi-trasparent);
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+
+    }
+
+    .offcanvas {
+        @include set-background-and-text($semi-trasparent);
+
+
+
+    }
+
+    .nav-link {
+        color: set-text-color($semi-trasparent);
+        font-size: small;
+
+        &:active {
+            color: $primary;
+        }
+    }
+
+
+    @media (min-width: 991px) {
+        .nav-link {
+            color: darken($primary, 20%);
+            font-weight: 500;
+            font-size: small;
+            position: relative;
+
+            &:hover,
+            &:active {
+                color: darken($primary, 10%);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 2px;
+                background-color: $primary;
+                visibility: hidden;
+                transition: 0.3s ease-in-out;
+            }
+
+            &:hover::before,
+            &.active::before {
+                width: 100%;
+                visibility: visible;
+            }
+
+
+        }
+    }
+}

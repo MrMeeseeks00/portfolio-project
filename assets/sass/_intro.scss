@@ -1,0 +1,44 @@
+.intro-section {
+    @include set-background-and-text(#fff);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        height: 1px;
+        background-color: darken($color: $primary, $amount: 20%);
+    }
+
+
+    .display-2 {
+
+        &--intro {
+            font-size: 30px;
+            display: block;
+            font-weight: 400;
+        }
+
+        &--intro2 {
+            font-size: medium;
+            display: block;
+        }
+
+        &--descrizione {
+            font-size: small;
+            display: block;
+        }
+    }
+
+    .max-200px {
+        max-width: 100%;
+        max-height: 200px;
+
+    }
+
+
+
+}

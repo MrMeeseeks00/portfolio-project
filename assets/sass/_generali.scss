@@ -1,0 +1,30 @@
+$font-stack: Arial, Helvetica, sans-serif;
+$gray: lighten($color: #333, $amount: 50%);
+$primary: #00b7ff;
+$semi-trasparent: rgba(0, 0, 0, 0.05);
+
+//funzione colore testo in base a bg
+@function set-text-color($color) {
+    @if(lightness($color)>70) {
+        @return #333;
+    }
+
+    @else {
+        @return #fff;
+    }
+}
+
+//mixin per settare colore background e testo
+@mixin set-background-and-text($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+html {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body {
+    height: 1000px;
+}
