@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -14,7 +18,7 @@
                                         NAVBAR
     ----------------------------------------------------------------------------->
 
-    <nav class="navbar navbar-expand-lg shadow fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top mx-auto">
         <div class="container-fluid align-items-center">
             <a class="navbar-brand me-auto" href="#">GCF</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -24,8 +28,9 @@
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">GCF</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Greg Carli Fandialan</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -52,29 +57,176 @@
                                     INTRO SECTION
      ------------------------------------------------------------------------------------------>
 
-    <section id="home" class="intro-section pb-5 mb-5">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
+    <section id="home" class="intro-section px-5 pb-5 mb-0 mx-auto">
+        <div class="container pb-5">
+            <div class="row align-items-center justify-content-center mb-5">
                 <div class="col-md-6 intros">
                     <h1 class="display-2">
-                        <span class="display-2--intro">Ciao, sono Carli.</span>
+                        <span class="display-2--intro" id="ciao">Ciao, sono Carli.</span>
                         <span class="display-2--intro2">Full Stack Web Developer operante nella città di Milano</span>
-                        <span class="display-2--descrizione">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Repellendus possimus nihil odio error expedita illo optio fuga? Recusandae facilis
-                            consequatur placeat deserunt omnis. Optio quidem, rerum error veritatis illo
-                            natus.
+                        <span class="display-2--descrizione py-3">
+                            Sono entusiasta di portare la mia passione e le mie competenze nel vostro team per
+                            contribuire a progetti entusiasmanti e di successo.
                         </span>
                     </h1>
+                    <button class="btn px-4" id="info-btn"> Più informazioni
+                        <span>
+                            <i class="bi bi-arrow-right-short"></i>
+                        </span>
+                    </button>
                 </div>
                 <div class="col-md-6 d-flex align-items-center justify-content-center my-5">
-                    <img src="assets/img/gintoki.jpg" alt="Nessuna Immagine" class="img-fluid responsive-img max-200px">
+                    <img src="assets/img/gintoki.jpg" alt="Nessuna Immagine"
+                        class="img-fluid responsive-img mia-immagine">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- sadsadasdadsa -->
+    <!------------------------------------------------------------------------------------------------
+                                     SKILLS 
+      ------------------------------------------------------------------------------------------------------>
+    <section id="skills" class="skills-section py-5 text-center">
+
+        <div class="wrapper my-2 py-3">
+            <div class="skill-title">
+                <h2 class="">SKILLS</h2>
+                <!-- <span class="cursor">&nbsp;</span> -->
+            </div>
+        </div>
+
+        <div class="container py-3 my-3">
+            <div class="row align-items-center justify-content-center g-4">
+                <div class="col skill">
+                    <div class="logo text-center">
+                        <img src="assets/img/skills/icons8-html-5-48.png" alt="Logo-skill">
+                        <div class="logo-title text-center">HTML</div>
+                    </div>
+                </div>
+                <div class="col skill">
+                    <div class="logo text-center">
+                        <img src="assets/img/skills/icons8-css-48.png" alt="Logo-skill">
+                        <div class="logo-title text-center">CSS</div>
+                    </div>
+                </div>
+                <div class="col skill">
+                    <div class="logo text-center">
+                        <img src="assets/img/skills/icons8-javascript-48.png" alt="Logo-skill">
+                        <div class="logo-title text-center">Javascript</div>
+                    </div>
+                </div>
+                <div class="col skill">
+                    <div class="logo text-center">
+                        <img src="assets/img/skills/icons8-typescript-48.png" alt="Logo-skill">
+                        <div class="logo-title text-center">Typescript</div>
+                    </div>
+                </div>
+                <div class="col skill">
+                    <div class="logo text-center">
+                        <img src="assets/img/skills/icons8-java-48.png" alt="Logo-skill">
+                        <div class="logo-title text-center">Java</div>
+                    </div>
+                </div>
+                <div class="col skill">
+                    <div class="logo text-center">
+                        <img src="assets/img/skills/icons8-sass-48.png" alt="Logo-skill">
+                        <div class="logo-title text-center">Sass</div>
+                    </div>
+                </div>
+                <div class="col skill">
+                    <div class="logo text-center">
+                        <img src="assets/img/skills/icons8-bootstrap-48.png" alt="Logo-skill">
+                        <div class="logo-title text-center">Bootstrap</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+    </section>
+
+    <!--  ----------------------------------------------------------------------------------------------------
+                                    PROGETTI
+    ---------------------------------------------------------------------------------------------------- -->
+    <section class="project my-4 py-4">
+
+        <div class="wrapper my-2 py-3">
+            <div class="project-title">
+                <h2 class="">PROGETTI</h2>
+                <!-- <span class="cursor">&nbsp;</span> -->
+            </div>
+        </div>
+        
+        <div class="container my-4">
+
+            <div class="row project-row g-1 my-5">
+                <div class="col-md-6 justify-content-center align-items-center project-image">
+                    <img src="assets/img/gintoki.jpg" alt="Immagine progetto" class="img-fluid responsive-image img-p">
+                </div>
+                <div class="col-md-6 project-content p-3">
+                    <h3 class="project-content--title poppins-medium">TITOLO</h2>
+                        <p class="project-content--description poppins-regular">Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit. Harum ea commodi nostrum? Autem ipsa eum delectus assumenda earum corrupti
+                            voluptatibus voluptate quo? Totam nulla mollitia culpa, fugiat quam expedita autem.</p>
+                        <h6 class="poppins-regular">REALIZZATO CON</h6>
+                        <div class="project-content--tools">
+                            <img src="assets/img/skills/icons8-html-5-48.png" alt="" class="img-fluid responsive-img">
+                            <img src="assets/img/skills/icons8-css-48.png" alt="" class="img-fluid responsive-img">
+                            <img src="assets/img/skills/icons8-javascript-48.png" alt=""
+                                class="img-fluid responsive-img">
+                        </div>
+                        <div class="project-content--links">
+                            <a href="https://google.com" class="project-content--link">Scopri di più</a>
+                        </div>
+                </div>
+            </div>
+
+            <div class="row project-row g-1 my-5">
+                <div class="col-md-6 justify-content-center align-items-center project-image">
+                    <img src="assets/img/gintoki.jpg" alt="Immagine progetto" class="img-fluid responsive-image img-p">
+                </div>
+                <div class="col-md-6 project-content p-3">
+                    <h3 class="project-content--title poppins-medium">TITOLO</h2>
+                        <p class="project-content--description poppins-regular">Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit. Harum ea commodi nostrum? Autem ipsa eum delectus assumenda earum corrupti
+                            voluptatibus voluptate quo? Totam nulla mollitia culpa, fugiat quam expedita autem.</p>
+                        <h6 class="poppins-regular">REALIZZATO CON</h6>
+                        <div class="project-content--tools">
+                            <img src="assets/img/skills/icons8-html-5-48.png" alt="" class="img-fluid responsive-img">
+                            <img src="assets/img/skills/icons8-css-48.png" alt="" class="img-fluid responsive-img">
+                            <img src="assets/img/skills/icons8-javascript-48.png" alt=""
+                                class="img-fluid responsive-img">
+                        </div>
+                        <div class="project-content--links">
+                            <a href="https://google.com" class="project-content--link">Scopri di più</a>
+                        </div>
+                </div>
+            </div>
+
+            <div class="row project-row g-1 my-5">
+                <div class="col-md-6 justify-content-center align-items-center project-image">
+                    <img src="assets/img/gintoki.jpg" alt="Immagine progetto" class="img-fluid responsive-image img-p">
+                </div>
+                <div class="col-md-6 project-content p-3">
+                    <h3 class="project-content--title poppins-medium">TITOLO</h2>
+                        <p class="project-content--description poppins-regular">Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit. Harum ea commodi nostrum? Autem ipsa eum delectus assumenda earum corrupti
+                            voluptatibus voluptate quo? Totam nulla mollitia culpa, fugiat quam expedita autem.</p>
+                        <h6 class="poppins-regular">REALIZZATO CON</h6>
+                        <div class="project-content--tools">
+                            <img src="assets/img/skills/icons8-html-5-48.png" alt="" class="img-fluid responsive-img">
+                            <img src="assets/img/skills/icons8-css-48.png" alt="" class="img-fluid responsive-img">
+                            <img src="assets/img/skills/icons8-javascript-48.png" alt=""
+                                class="img-fluid responsive-img">
+                        </div>
+                        <div class="project-content--links">
+                            <a href="https://google.com" class="project-content--link">Scopri di più</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- BOOTSTRAP JS -->
 

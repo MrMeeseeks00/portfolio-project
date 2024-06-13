@@ -1,3 +1,4 @@
+
 .navbar {
     background-color: $semi-trasparent;
     height: 80px;
@@ -5,16 +6,17 @@
     border-radius: 16px;
     padding: 0.5rem;
     position: sticky;
+    
 
 
     &-brand {
         font-weight: 500;
-        color: lighten($primary, 10%);
+        color: darken($primary, 10%);
         font-size: 24px;
         transition: 0.3s color;
 
         &:hover {
-            color: darken($primary, 10%);
+            color: lighten($primary, 20%);
         }
     }
 
@@ -34,25 +36,28 @@
 
     .btn-close {
         color: set-text-color($semi-trasparent);
+        display: transparent;
 
         &:focus {
             box-shadow: none;
             outline: none;
         }
 
+
     }
 
     .offcanvas {
         @include set-background-and-text($semi-trasparent);
-
-
-
     }
 
     .nav-link {
         color: set-text-color($semi-trasparent);
         font-size: small;
 
+        &:hover {
+            color: lighten($primary, 10%);
+        }
+        
         &:active {
             color: $primary;
         }
@@ -68,7 +73,7 @@
 
             &:hover,
             &:active {
-                color: darken($primary, 10%);
+                color: $primary;
             }
 
             &::before {

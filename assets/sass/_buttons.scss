@@ -1,0 +1,10 @@
+.btn {
+    @include set-background-and-text(#333);
+    border-radius: 50px;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+        @include set-background-and-text(#333);
+        opacity: 85%;
+    }
+}

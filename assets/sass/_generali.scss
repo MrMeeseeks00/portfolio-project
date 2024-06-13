@@ -1,7 +1,12 @@
-$font-stack: Arial, Helvetica, sans-serif;
-$gray: lighten($color: #333, $amount: 50%);
+/* $font-stack: Arial, Helvetica, sans-serif; */
 $primary: #00b7ff;
-$semi-trasparent: rgba(0, 0, 0, 0.05);
+$secondary: #00ff2682;
+$semi-trasparent: rgba(0, 0, 0, 0.005);
+
+body {
+    /* height: 2000px; */
+    font-family: "Poppins", sans-serif;
+}
 
 //funzione colore testo in base a bg
 @function set-text-color($color) {
@@ -20,11 +25,15 @@ $semi-trasparent: rgba(0, 0, 0, 0.05);
     color: set-text-color($color);
 }
 
-html {
-    max-width: 800px;
+@mixin center-section() {
+    max-width: 700px;
     margin: 0 auto;
 }
 
-body {
-    height: 1000px;
+nav {
+    @include center-section();
+}
+
+section {
+    @include center-section();
 }
