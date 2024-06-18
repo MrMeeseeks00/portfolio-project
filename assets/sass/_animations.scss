@@ -75,3 +75,14 @@
         border-color: $secondary;
     }
 }
+
+@keyframes stickyNav {
+    0%, 100%{
+        width: fit-content;
+    }
+    100%{
+        top: 1rem;
+        color: lighten($primary, 10%);
+        box-shadow: 0 0 0.75rem hsl(0, 0%, 0%, 0.3);
+    }
+}

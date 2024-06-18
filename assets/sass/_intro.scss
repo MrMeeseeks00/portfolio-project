@@ -1,17 +1,13 @@
 .intro-section {
+    .container {
+        @include center-section;
+    }
     @include set-background-and-text(#fff);
     position: relative;
     font-family: "Poppins", sans-serif;
 
     &::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 95%;
-        height: 1px;
-        background-color: darken($primary, 20%);
+        @include section-divider;
     }
 
 

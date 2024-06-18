@@ -1,9 +1,21 @@
 .project {
     text-align: center;
+    position: relative;
+
+    &::before {
+        @include section-divider;
+    }
+
+
     .wrapper {
         display: inline-block;
         text-align: center;
         font-family: 'Poppins', sans-serif;
+        
+    }
+
+    .container {
+        @include center-section
     }
 
     &-title {
@@ -12,7 +24,7 @@
         white-space: nowrap;
         margin: 0 auto;
         display: inline-block;
-        animation: typing 1.5s steps(5),
+        animation: typing 1.5s steps(7),
             /* cursor-blink 0.7s step-end infinite */
             fade-in 4s backwards;
         animation-timeline: view();
@@ -46,7 +58,7 @@
     }
 
     &-content {
-        @include set-background-and-text (rgba($primary, 0.6));
+        @include set-background-and-text (rgba(darken($primary, 30%), 0.6));
         border-radius: 2%;
         row-gap: 10%;
         animation: grow-left 7s backwards ease-in-out, fade-in 7s 8s backwards;
@@ -54,14 +66,38 @@
         animation-timeline: view();
         animation-range: entry 50% cover 45%;
 
+        &--title {
+            margin: 12px auto;
+        }
+
         &--description {
+            margin: 12px auto;
             font-size: small;
         }
 
+        h6 {
+            margin: 12px auto;
+        }
+
         &--tools {
+            margin: 12px auto;
             img {
                 max-height: 30px;
                 max-width: 100%;
+            }
+        }
+    }
+
+    &-viewAll {
+        &-btn {
+            width: 40%;
+            height: auto;
+            font-size: 1.5vw;
+        }
+        @media (max-width: 800px) {
+            &-btn {
+                width: 40%;;
+                font-size: 2vw;
             }
         }
     }

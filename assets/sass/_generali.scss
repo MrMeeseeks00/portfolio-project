@@ -1,12 +1,11 @@
 /* $font-stack: Arial, Helvetica, sans-serif; */
 $primary: #00b7ff;
 $secondary: #00ff2682;
-$semi-trasparent: rgba(0, 0, 0, 0.005);
+$semi-trasparent: rgba(0, 0, 0, 0.05);
+//$semi-trasparent: hsl(0 50% 90% / 0.05);
 
-body {
-    /* height: 2000px; */
-    font-family: "Poppins", sans-serif;
-}
+
+
 
 //funzione colore testo in base a bg
 @function set-text-color($color) {
@@ -25,15 +24,46 @@ body {
     color: set-text-color($color);
 }
 
+//per centrare sezioni
 @mixin center-section() {
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
 }
 
-nav {
-    @include center-section();
+//linea che divide sezioni
+@mixin section-divider() {
+    content: '';
+    position: absolute; //mettere parent position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 1px;
+    background-color: darken($primary, 20%);
 }
 
-section {
-    @include center-section();
+
+html {
+
+    body {
+        /* height: 2000px; */
+        font-family: "Poppins", sans-serif;
+
+        @media (min-width: 787px) {
+            nav {
+                @include center-section();
+            }
+            section {
+                @include center-section();
+            }
+            
+        }
+        /*         nav {
+            @include center-section();
+        }
+        section {
+            @include center-section();
+        } */
+    }
+
 }

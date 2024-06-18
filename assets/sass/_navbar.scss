@@ -1,13 +1,22 @@
-
 .navbar {
-    background-color: $semi-trasparent;
-    height: 80px;
-    margin: 20px;
+    --_animazioneInizio: 50vh;
+    --_animazioneDistanza: 120px;
+
+    background-color: transparent;
     border-radius: 16px;
     padding: 0.5rem;
-    position: sticky;
-    
 
+    position: sticky;
+    z-index: 1000;
+    top: -5rem;
+    animation: stickyNav linear forwards;
+
+    @supports (animation-timeline: view()) {
+        backdrop-filter: blur(0.15rem); 
+        animation-timeline: view();
+        animation-range-start: calc(100vh + var(--_animazioneInizio));
+        animation-range-end: calc(100vh + var(--_animazioneInizio) + var(--_animazioneDistanza));
+    }
 
     &-brand {
         font-weight: 500;
@@ -20,62 +29,21 @@
         }
     }
 
+    .nav-item {
 
-    &-toggler {
-        border: none;
+        margin: auto 10px;
 
-        &:focus {
-            box-shadow: none;
-            outline: none;
-        }
-
-        &-icon {
-            background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 183, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-        }
-    }
-
-    .btn-close {
-        color: set-text-color($semi-trasparent);
-        display: transparent;
-
-        &:focus {
-            box-shadow: none;
-            outline: none;
-        }
-
-
-    }
-
-    .offcanvas {
-        @include set-background-and-text($semi-trasparent);
-    }
-
-    .nav-link {
-        color: set-text-color($semi-trasparent);
-        font-size: small;
-
-        &:hover {
-            color: lighten($primary, 10%);
-        }
-        
-        &:active {
-            color: $primary;
-        }
-    }
-
-
-    @media (min-width: 991px) {
         .nav-link {
-            color: darken($primary, 20%);
+            color: $primary;
             font-weight: 500;
             font-size: small;
             position: relative;
-
+    
             &:hover,
             &:active {
-                color: $primary;
+                color: lighten($primary, 10%);
             }
-
+    
             &::before {
                 content: "";
                 position: absolute;
@@ -88,14 +56,17 @@
                 visibility: hidden;
                 transition: 0.3s ease-in-out;
             }
-
+    
             &:hover::before,
             &.active::before {
                 width: 100%;
                 visibility: visible;
             }
-
-
+    
+    
         }
+
     }
+
+    
 }
