@@ -1,8 +1,5 @@
 .intro-section {
-    .container {
-        @include center-section;
-    }
-    @include set-background-and-text(#fff);
+    @include set-background-and-text($dark);
     position: relative;
     font-family: "Poppins", sans-serif;
 

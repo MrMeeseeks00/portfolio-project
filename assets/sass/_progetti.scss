@@ -11,7 +11,7 @@
         display: inline-block;
         text-align: center;
         font-family: 'Poppins', sans-serif;
-        
+
     }
 
     .container {
@@ -20,6 +20,7 @@
 
     &-title {
         overflow: hidden;
+        @include set-background-and-text($dark);
         /* border-right: 0.15em solid $secondary; */
         white-space: nowrap;
         margin: 0 auto;
@@ -46,23 +47,23 @@
         text-align: center;
         background-color: $semi-trasparent;
         animation: grow-right 7s backwards ease-in-out, fade-in 7s 8s backwards;
-        /* animation: appear-b 0.1s backwards, fade-in 7s 8s backwards; */
         animation-timeline: view();
         animation-range: entry 50% cover 45%;
 
         .img-p {
             max-height: 300px;
             max-width: 100%;
-            border-radius: 10%;
+            border-radius: 40%;
         }
     }
 
+
+
     &-content {
-        @include set-background-and-text (rgba(darken($primary, 30%), 0.6));
+        @include set-background-and-text ($dark);
         border-radius: 2%;
         row-gap: 10%;
         animation: grow-left 7s backwards ease-in-out, fade-in 7s 8s backwards;
-        /* animation: appear-b 0.1s backwards, fade-in 10s 8s backwards; */
         animation-timeline: view();
         animation-range: entry 50% cover 45%;
 
@@ -81,6 +82,7 @@
 
         &--tools {
             margin: 12px auto;
+
             img {
                 max-height: 30px;
                 max-width: 100%;
@@ -88,15 +90,37 @@
         }
     }
 
+    @media (min-width: 767px) {
+        .second-row {
+            .project-image {
+                animation: grow-left 7s backwards ease-in-out, fade-in 7s 8s backwards;
+                animation-timeline: view();
+                animation-range: entry 50% cover 45%;
+            }
+
+            .project-content {
+                animation: grow-right 7s backwards ease-in-out, fade-in 7s 8s backwards;
+                animation-timeline: view();
+                animation-range: entry 50% cover 45%;
+            }
+        }
+    }
+
     &-viewAll {
+        animation: appear-b 0.1s backwards, fade-in 5s 5s backwards;
+        animation-timeline: view();
+        animation-range: entry 50% cover 20%;
+
         &-btn {
             width: 40%;
             height: auto;
             font-size: 1.5vw;
         }
+
         @media (max-width: 800px) {
             &-btn {
-                width: 40%;;
+                width: 40%;
+                ;
                 font-size: 2vw;
             }
         }

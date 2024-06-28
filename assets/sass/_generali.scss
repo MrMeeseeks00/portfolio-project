@@ -2,6 +2,7 @@
 $primary: #00b7ff;
 $secondary: #00ff2682;
 $semi-trasparent: rgba(0, 0, 0, 0.05);
+$dark: black;
 //$semi-trasparent: hsl(0 50% 90% / 0.05);
 
 
@@ -37,7 +38,7 @@ $semi-trasparent: rgba(0, 0, 0, 0.05);
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 95%;
+    width: 60%;
     height: 1px;
     background-color: darken($primary, 20%);
 }
@@ -47,14 +48,14 @@ html {
 
     body {
         /* height: 2000px; */
+        background-color: $dark;
         font-family: "Poppins", sans-serif;
 
         @media (min-width: 787px) {
-            nav {
-                @include center-section();
-            }
             section {
-                @include center-section();
+                .container {
+                    @include center-section();
+                }
             }
             
         }

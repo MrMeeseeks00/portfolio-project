@@ -2,10 +2,11 @@
     @include set-background-and-text (darken($primary,40%));
     border-radius: 20px;
 
-    &-intro {
-        &--title {
 
-        }
+    &-intro {
+/*         &--title {
+
+        } */
         &--descr {
             font-size: small;
         }
@@ -28,5 +29,9 @@
             width: 25%;
 
         }
+    }
+
+    .hidden {
+        display: none;
     }
 }

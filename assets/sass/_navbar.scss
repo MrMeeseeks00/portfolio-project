@@ -2,6 +2,9 @@
     --_animazioneInizio: 50vh;
     --_animazioneDistanza: 120px;
 
+    .container-fluid {
+        @include center-section;
+    }
     background-color: transparent;
     border-radius: 16px;
     padding: 0.5rem;
@@ -34,6 +37,7 @@
         margin: auto 10px;
 
         .nav-link {
+            padding-bottom: 2px;
             color: $primary;
             font-weight: 500;
             font-size: small;

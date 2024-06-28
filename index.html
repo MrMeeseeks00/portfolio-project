@@ -20,22 +20,22 @@
 
     <nav class="navbar mx-auto">
         <div class="container-fluid flex-nowrap">
-          <a class="navbar-brand" href="#">GCF</a>
-    <div class="navbar-links">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row">
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Info</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Progetti</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contattami">Contatto</a>
-            </li>
-          </ul>
-    </div>
+            <a class="navbar-brand" href="#">GCF</a>
+            <div class="navbar-links">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Progetti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contattami">Contatto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
 
 
     <!-- --------------------------------------------------------------------------------------
@@ -43,8 +43,8 @@
      ------------------------------------------------------------------------------------------>
 
     <section id="home" class="intro-section px-5 pb-5 mb-4 mx-auto">
-        <div class="container pb-5">
-            <div class="row align-items-center justify-content-center mb-5">
+        <div class="container py-5">
+            <div class="row align-items-center justify-content-center py-5 mb-5">
                 <div class="col-md-6 intros">
                     <h1 class="display-2">
                         <span class="display-2--intro" id="ciao">Ciao, sono Carli.</span>
@@ -146,7 +146,7 @@
         <div class="container my-4">
 
             <div class="row project-row g-1 my-5">
-                <div class="col-md-6 justify-content-center align-items-center project-image">
+                <div class="col-md-6 justify-content-center align-items-center project-image ">
                     <img src="assets/img/gintoki.jpg" alt="Immagine progetto" class="img-fluid responsive-image img-p">
                 </div>
                 <div class="col-md-6 project-content p-3">
@@ -167,11 +167,11 @@
                 </div>
             </div>
 
-            <div class="row project-row g-1 my-5">
-                <div class="col-md-6 justify-content-center align-items-center project-image">
+            <div class="row project-row g-1 my-5 second-row">
+                <div class="col-md-6 justify-content-center align-items-center project-image order-md-2">
                     <img src="assets/img/gintoki.jpg" alt="Immagine progetto" class="img-fluid responsive-image img-p">
                 </div>
-                <div class="col-md-6 project-content p-3">
+                <div class="col-md-6 project-content p-3 order-md-1">
                     <h3 class="project-content--title poppins-medium">TITOLO</h2>
                         <p class="project-content--description poppins-regular">Lorem ipsum dolor, sit amet consectetur
                             adipisicing elit. Harum ea commodi nostrum? Autem ipsa eum delectus assumenda earum corrupti
@@ -225,46 +225,107 @@
                                         CONTATTO
     ----------------------------------------------------------------------------------------------------------------------------->
     <section id="contattami" class="contact">
-        <div class="container m-3">
+        <div class="container">
             <div class="row">
                 <div class="col-md-4 contact-intro p-3">
                     <h4 class="contact-intro--title my-3">Contattami</h3>
-                    <p class="contact-intro--descr my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit culpa
-                        esse totam. Labore necessitatibus hic unde ipsa iste quis alias quasi laborum minus veniam,
-                        optio asperiores ullam sit incidunt voluptates.</p>
-                    <div class="contact-intro--social my-3 px-4 d-flex justify-content-start align-items-center gap-5">
-                        <div class="contact-intro--social-icons">
-                            <a href="">
-                                <img src="assets/img/skills/icons8-bootstrap-48.png" alt="" class="img-fluid responsive-img">
-                            </a>
+                        <p class="contact-intro--descr my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Odit culpa
+                            esse totam. Labore necessitatibus hic unde ipsa iste quis alias quasi laborum minus veniam,
+                            optio asperiores ullam sit incidunt voluptates.</p>
+                        <div
+                            class="contact-intro--social my-3 px-4 d-flex justify-content-start align-items-center gap-5">
+                            <div class="contact-intro--social-icons">
+                                <a href="">
+                                    <img src="assets/img/skills/icons8-bootstrap-48.png" alt=""
+                                        class="img-fluid responsive-img">
+                                </a>
+                            </div>
+                            <div class="contact-intro--social-icons">
+                                <a href="">
+                                    <img src="assets/img/skills/icons8-css-48.png" alt=""
+                                        class="img-fluid responsive-img">
+                                </a>
+                            </div>
+                            <div class="contact-intro--social-icons">
+                                <a href="">
+                                    <img src="assets/img/skills/icons8-html-5-48.png" alt=""
+                                        class="img-fluid responsive-img">
+                                </a>
+                            </div>
                         </div>
-                        <div class="contact-intro--social-icons">
-                            <a href="">
-                                <img src="assets/img/skills/icons8-css-48.png" alt="" class="img-fluid responsive-img">
-                            </a>
-                        </div>
-                        <div class="contact-intro--social-icons">
-                            <a href="">
-                                <img src="assets/img/skills/icons8-html-5-48.png" alt="" class="img-fluid responsive-img">
-                            </a>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-md-8 contact-form my-3">
-                    <input type="text" name="" id="" class="form-control-sm contact-form--casella" placeholder="nome">
-                    <input type="email" class="form-control-sm contact-form--casella" placeholder="email">
-                    <textarea name="" id="" class="form-control-sm contact-form--casella" rows="5" placeholder="messaggio"></textarea>
+                <form id="contact-form" class="needs-validation col-md-8 contact-form my-3" novalidate>
+                    <input type="text" name="user_name" id="nome" class="form-control-sm contact-form--casella"
+                        placeholder="nome" required>
+                    <div class="invalid-feedback">Inserisci il tuo nome</div>
+                    <input type="email" name="user_email" id="email" class="form-control-sm contact-form--casella" placeholder="email"
+                        required>
+                    <div class="invalid-feedback">Inserisci un'indirizzo mail valida</div>
+                    <textarea name="message" id="messaggio" class="form-control-sm contact-form--casella" rows="5"
+                        placeholder="messaggio"></textarea>
                     <button type="submit" class="btn btn-primary contact-form--button">Invia</button>
 
-                </div>
+                </form>
+                <div id="successMessage" class="alert alert-success mt-3 hidden" role="alert"> La tua richiesta è stata
+                    mandata con successo!</div>
             </div>
         </div>
     </section>
 
+    <!--------------------------------------------------------------------------------
+                                 FOOTER 
+    ------------------------------------------------------------------------------------>
+
+    <section class="footer d-flex justify-content-center align-items-center mt-2">
+        <p>Creato da Greg Carli Fandialan :D</p>
+    </section>
+
+    <!-- ---------------------------------------------------------------------------------------------
+                                SCRIPTS
+    --------------------------------------------------------------------------------------- -->
+
     <!-- BOOTSTRAP JS -->
 
+    <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- EmailJS SDK -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "yNja1cNV0z-UGWXpn",
+            });
+        })();
+    </script>
+
+    <!-- Validazione Form utilizzando Bootstrap e EmailJS -->
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            if (!this.checkValidity()) {
+                event.stopPropagation();
+                this.classList.add('was-validated');
+            } else {
+
+                emailjs.sendForm('service_26az1gh', 'contact_form', this)
+                    .then(function (response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        document.getElementById('successMessage').classList.remove('hidden');
+                        document.getElementById('contact-form').reset(); 
+                        document.getElementById('contact-form').classList.remove('was-validated');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+
+            }
+        });
+    </script>
 </body>
 
 </html>
