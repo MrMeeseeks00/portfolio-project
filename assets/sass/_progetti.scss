@@ -61,7 +61,9 @@
 
     &-content {
         @include set-background-and-text ($dark);
-        border-radius: 2%;
+        border-radius: 1%;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
         row-gap: 10%;
         animation: grow-left 7s backwards ease-in-out, fade-in 7s 8s backwards;
         animation-timeline: view();
@@ -69,6 +71,21 @@
 
         &--title {
             margin: 12px auto;
+            padding-bottom: 2px;
+            text-transform: uppercase;
+
+            .title-1 {
+                color: darken($secondary,10%);
+            }
+
+            .title-2 {
+                color: darken($tertiary,10%);
+            }
+
+            .title-3 {
+                color: darken($quaternary,10%);
+            }
+
         }
 
         &--description {
@@ -88,7 +105,59 @@
                 max-width: 100%;
             }
         }
+
+        &--links {
+            .btn {
+                @include set-background-and-text($dark);
+                border: 0.015rem solid #fff;
+                transition: opacity 0.2s ease-in-out;
+                text-transform: uppercase;
+
+                &:hover {
+                    @include set-background-and-text($dark);
+                    opacity: 85%;
+                    border: 0.015rem solid #fff;
+                }
+            }
+        }
     }
+
+    #project-content-1 {
+        border-color: $secondary;
+        .btn {
+           &:hover{
+                width: 25%;
+                letter-spacing: 0.5px;
+                color: $secondary;
+                border: 0.015rem solid $secondary;
+            }
+        }
+    }
+
+    #project-content-2 {
+        border-color: $tertiary;
+        .btn {
+            &:hover{
+                 width: 25%;
+                 letter-spacing: 0.5px;
+                 color: $tertiary;
+                 border: 0.015rem solid $tertiary;
+             }
+         }
+    }
+
+    #project-content-3 {
+        border-color: $quaternary;
+        .btn {
+            &:hover{
+                 width: 25%;
+                 letter-spacing: 0.5px;
+                 color: $quaternary;
+                 border: 0.015rem solid $quaternary;
+             }
+         }
+    }
+
 
     @media (min-width: 767px) {
         .second-row {
@@ -112,9 +181,18 @@
         animation-range: entry 50% cover 20%;
 
         &-btn {
-            width: 40%;
+/*             width: 40%;
             height: auto;
-            font-size: 1.5vw;
+            font-size: 1.5vw; */
+            @include set-background-and-text(darken($primary,20%));
+            border: 0.015rem solid #fff;
+            transition: opacity 0.2s ease-in-out;
+
+            &:hover {
+                @include set-background-and-text(darken($primary,20%));
+                opacity: 85%;
+                border: 0.015rem solid #fff;
+            }
         }
 
         @media (max-width: 800px) {

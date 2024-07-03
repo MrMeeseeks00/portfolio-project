@@ -1,6 +1,6 @@
 .contact {
     @include set-background-and-text (darken($primary,40%));
-    border-radius: 20px;
+    border-radius: 2px;
 
 
     &-intro {

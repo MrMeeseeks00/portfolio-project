@@ -11865,13 +11865,14 @@ html body {
 }
 
 .btn {
-  background-color: #00b7ff;
+  background-color: #006e99;
   color: #fff;
-  border-radius: 50px;
-  transition: opacity 0.3s ease-in-out;
+  border-radius: 5px;
+  border: 0.015rem solid #fff;
+  transition: opacity 0.2s ease-in-out;
 }
 .btn:hover {
-  background-color: #00b7ff;
+  background-color: #006e99;
   color: #fff;
   opacity: 85%;
   border: 0.015rem solid #fff;
@@ -11940,7 +11941,7 @@ html body {
     border-color: transparent;
   }
   50% {
-    border-color: rgba(0, 255, 38, 0.5098039216);
+    border-color: rgba(0, 255, 38, 0.9176470588);
   }
 }
 @keyframes stickyNav {
@@ -12223,7 +12224,9 @@ html body {
 .project-content {
   background-color: black;
   color: #fff;
-  border-radius: 2%;
+  border-radius: 1%;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
   row-gap: 10%;
   animation: grow-left 7s backwards ease-in-out, fade-in 7s 8s backwards;
   animation-timeline: view();
@@ -12231,6 +12234,17 @@ html body {
 }
 .project-content--title {
   margin: 12px auto;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+}
+.project-content--title .title-1 {
+  color: rgba(0, 204, 30, 0.9176470588);
+}
+.project-content--title .title-2 {
+  color: rgba(204, 0, 177, 0.9647058824);
+}
+.project-content--title .title-3 {
+  color: #c9cc00;
 }
 .project-content--description {
   margin: 12px auto;
@@ -12245,6 +12259,46 @@ html body {
 .project-content--tools img {
   max-height: 30px;
   max-width: 100%;
+}
+.project-content--links .btn {
+  background-color: black;
+  color: #fff;
+  border: 0.015rem solid #fff;
+  transition: opacity 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+.project-content--links .btn:hover {
+  background-color: black;
+  color: #fff;
+  opacity: 85%;
+  border: 0.015rem solid #fff;
+}
+.project #project-content-1 {
+  border-color: rgba(0, 255, 38, 0.9176470588);
+}
+.project #project-content-1 .btn:hover {
+  width: 25%;
+  letter-spacing: 0.5px;
+  color: rgba(0, 255, 38, 0.9176470588);
+  border: 0.015rem solid rgba(0, 255, 38, 0.9176470588);
+}
+.project #project-content-2 {
+  border-color: rgba(255, 0, 221, 0.9647058824);
+}
+.project #project-content-2 .btn:hover {
+  width: 25%;
+  letter-spacing: 0.5px;
+  color: rgba(255, 0, 221, 0.9647058824);
+  border: 0.015rem solid rgba(255, 0, 221, 0.9647058824);
+}
+.project #project-content-3 {
+  border-color: #fbff00;
+}
+.project #project-content-3 .btn:hover {
+  width: 25%;
+  letter-spacing: 0.5px;
+  color: #fbff00;
+  border: 0.015rem solid #fbff00;
 }
 @media (min-width: 767px) {
   .project .second-row .project-image {
@@ -12264,9 +12318,19 @@ html body {
   animation-range: entry 50% cover 20%;
 }
 .project-viewAll-btn {
-  width: 40%;
-  height: auto;
-  font-size: 1.5vw;
+  /*             width: 40%;
+              height: auto;
+              font-size: 1.5vw; */
+  background-color: #006e99;
+  color: #fff;
+  border: 0.015rem solid #fff;
+  transition: opacity 0.2s ease-in-out;
+}
+.project-viewAll-btn:hover {
+  background-color: #006e99;
+  color: #fff;
+  opacity: 85%;
+  border: 0.015rem solid #fff;
 }
 @media (max-width: 800px) {
   .project-viewAll-btn {
@@ -12278,7 +12342,7 @@ html body {
 .contact {
   background-color: #002533;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 2px;
 }
 .contact-intro {
   /*         &--title {
