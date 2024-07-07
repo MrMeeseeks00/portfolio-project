@@ -75,15 +75,15 @@
             text-transform: uppercase;
 
             .title-1 {
-                color: darken($secondary,10%);
+                color: darken($secondary, 10%);
             }
 
             .title-2 {
-                color: darken($tertiary,10%);
+                color: darken($tertiary, 10%);
             }
 
             .title-3 {
-                color: darken($quaternary,10%);
+                color: darken($quaternary, 10%);
             }
 
         }
@@ -124,8 +124,9 @@
 
     #project-content-1 {
         border-color: $secondary;
+
         .btn {
-           &:hover{
+            &:hover {
                 width: 25%;
                 letter-spacing: 0.5px;
                 color: $secondary;
@@ -136,26 +137,28 @@
 
     #project-content-2 {
         border-color: $tertiary;
+
         .btn {
-            &:hover{
-                 width: 25%;
-                 letter-spacing: 0.5px;
-                 color: $tertiary;
-                 border: 0.015rem solid $tertiary;
-             }
-         }
+            &:hover {
+                width: 25%;
+                letter-spacing: 0.5px;
+                color: $tertiary;
+                border: 0.015rem solid $tertiary;
+            }
+        }
     }
 
     #project-content-3 {
         border-color: $quaternary;
+
         .btn {
-            &:hover{
-                 width: 25%;
-                 letter-spacing: 0.5px;
-                 color: $quaternary;
-                 border: 0.015rem solid $quaternary;
-             }
-         }
+            &:hover {
+                width: 25%;
+                letter-spacing: 0.5px;
+                color: $quaternary;
+                border: 0.015rem solid $quaternary;
+            }
+        }
     }
 
 
@@ -181,24 +184,21 @@
         animation-range: entry 50% cover 20%;
 
         &-btn {
-/*             width: 40%;
-            height: auto;
-            font-size: 1.5vw; */
-            @include set-background-and-text(darken($primary,20%));
+            @include set-background-and-text(darken($primary, 20%));
             border: 0.015rem solid #fff;
             transition: opacity 0.2s ease-in-out;
 
             &:hover {
-                @include set-background-and-text(darken($primary,20%));
+                @include set-background-and-text(darken($primary, 20%));
                 opacity: 85%;
                 border: 0.015rem solid #fff;
             }
+
         }
 
         @media (max-width: 800px) {
             &-btn {
-                width: 40%;
-                ;
+                width: auto;
                 font-size: 2vw;
             }
         }
