@@ -2,6 +2,7 @@
     @include set-background-and-text($dark);
     position: relative;
     font-family: "Poppins", sans-serif;
+    padding-bottom: 250px;
 
     &::before {
         @include section-divider;
@@ -15,6 +16,13 @@
             display: block;
             font-weight: 700;
             animation: fade-in 4.5s;
+            span{
+                font-size: 50px;
+                color: $primary;
+                @media (min-width: 767px) {
+                    font-size: 60px;
+                }
+            }
         }
 
 
@@ -34,7 +42,8 @@
     }
 
     #info-btn {
-        animation: grow-right 3s 4s backwards, fade-in 3s 4s backwards;
+        animation: grow-left 3s 4s backwards, fade-in 3s 4s backwards;
+        float: right;
     }
 
     .mia-immagine {
