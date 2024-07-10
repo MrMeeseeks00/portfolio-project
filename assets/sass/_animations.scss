@@ -1,0 +1,88 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-left {
+     from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }   
+}
+
+@keyframes grow-right {
+    from {
+        transform: translateY(100%) translateX(-100%) scale(0);
+    }
+
+    to {
+        transform: translateY(0%) translateX(0%) scale(1);
+    }
+}
+
+@keyframes grow-left {
+    from {
+        transform: translateY(100%) translateX(100%) scale(0);
+    }
+    
+    to {
+        transform: translateY(0%) translateX(0%) scale(1);
+    }   
+}
+
+@keyframes appear-b {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes cursor-blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: $secondary;
+    }
+}
+
+@keyframes stickyNav {
+    0%, 100%{
+        width: fit-content;
+    }
+    100%{
+        top: 1rem;
+        color: lighten($primary, 10%);
+        box-shadow: 0 0 0.75rem hsl(0, 0%, 0%, 0.3);
+    }
+}

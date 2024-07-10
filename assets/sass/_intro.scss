@@ -1,0 +1,49 @@
+.intro-section {
+    @include set-background-and-text($dark);
+    position: relative;
+    font-family: "Poppins", sans-serif;
+
+    &::before {
+        @include section-divider;
+    }
+
+
+    .display-2 {
+
+        &--intro {
+            font-size: 30px;
+            display: block;
+            font-weight: 700;
+            animation: fade-in 4.5s;
+        }
+
+
+        &--intro2 {
+            font-size: 20px;
+            display: block;
+            font-weight: 350;
+            animation: fade-in 4s 2s backwards;
+        }
+
+        &--descrizione {
+            font-size: small;
+            display: block;
+            animation: /* grow-right 3s 4s backwards,  */fade-in 3s 4s both;
+        }
+
+    }
+
+    #info-btn {
+        animation: grow-right 3s 4s backwards, fade-in 3s 4s backwards;
+    }
+
+    .mia-immagine {
+        max-width: 100%;
+        max-height: 200px;
+        animation: slide-left 3s 4s backwards, fade-in 3s 4s backwards;
+
+    }
+
+
+
+}

@@ -1,0 +1,12 @@
+.btn {
+    @include set-background-and-text(darken($primary, 20%));
+    border-radius: 5px;
+    border: 0.015rem solid #fff;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+        @include set-background-and-text(darken($primary, 20%));
+        opacity: 85%;
+        border: 0.015rem solid #fff;
+    }
+}

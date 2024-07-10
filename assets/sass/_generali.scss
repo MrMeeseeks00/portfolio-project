@@ -1,0 +1,72 @@
+/* $font-stack: Arial, Helvetica, sans-serif; */
+$primary: #00b7ff;
+$secondary: #00ff26ea;
+$tertiary: #ff00ddf6;
+$quaternary: #fbff00;
+$semi-trasparent: rgba(0, 0, 0, 0.05);
+$dark: black;
+//$semi-trasparent: hsl(0 50% 90% / 0.05);
+
+
+
+
+//funzione colore testo in base a bg
+@function set-text-color($color) {
+    @if(lightness($color)>70) {
+        @return #333;
+    }
+
+    @else {
+        @return #fff;
+    }
+}
+
+//mixin per settare colore background e testo
+@mixin set-background-and-text($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+//per centrare sezioni
+@mixin center-section() {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+//linea che divide sezioni
+@mixin section-divider() {
+    content: '';
+    position: absolute; //mettere parent position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background-color: darken($primary, 20%);
+}
+
+
+html {
+
+    body {
+        /* height: 2000px; */
+        background-color: $dark;
+        font-family: "Poppins", sans-serif;
+
+        @media (min-width: 787px) {
+            section {
+                .container {
+                    @include center-section();
+                }
+            }
+            
+        }
+        /*         nav {
+            @include center-section();
+        }
+        section {
+            @include center-section();
+        } */
+    }
+
+}
