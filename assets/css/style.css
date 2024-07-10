@@ -12058,6 +12058,12 @@ html body {
   position: relative;
   font-family: "Poppins", sans-serif;
   padding-bottom: 250px;
+  /*     .mia-immagine {
+      max-width: 100%;
+      max-height: 200px;
+      animation: slide-left 3s 4s backwards, fade-in 3s 4s backwards;
+
+  } */
 }
 .intro-section::before {
   content: "";
@@ -12069,40 +12075,44 @@ html body {
   height: 1px;
   background-color: #006e99;
 }
-.intro-section .display-2--intro {
+.intro-section .intros .display-2--intro {
   font-size: 30px;
   display: block;
   font-weight: 700;
   animation: fade-in 4.5s;
 }
-.intro-section .display-2--intro span {
+.intro-section .intros .display-2--intro span {
   font-size: 50px;
   color: #00b7ff;
 }
 @media (min-width: 767px) {
-  .intro-section .display-2--intro span {
+  .intro-section .intros .display-2--intro span {
     font-size: 60px;
   }
 }
-.intro-section .display-2--intro2 {
+.intro-section .intros .display-2--intro2 {
   font-size: 20px;
   display: block;
   font-weight: 350;
   animation: fade-in 4s 2s backwards;
 }
-.intro-section .display-2--descrizione {
+.intro-section .intros .display-2--descrizione {
   font-size: small;
   display: block;
   animation: fade-in 3s 4s both;
 }
+.intro-section .intros-social {
+  padding-left: 10px;
+}
+.intro-section .intros-social-icons i {
+  max-height: 30px;
+  width: 100%;
+  color: #00b7ff;
+  animation: fade-in 3s 4.5s both;
+}
 .intro-section #info-btn {
   animation: grow-left 3s 4s backwards, fade-in 3s 4s backwards;
   float: right;
-}
-.intro-section .mia-immagine {
-  max-width: 100%;
-  max-height: 200px;
-  animation: slide-left 3s 4s backwards, fade-in 3s 4s backwards;
 }
 
 #skills {
@@ -12229,8 +12239,10 @@ html body {
 }
 .project-image .img-p {
   max-height: 300px;
+  width: auto;
   max-width: 100%;
-  border-radius: 40%;
+  border-radius: 2%;
+  margin-top: 10px;
 }
 .project-content {
   background-color: black;
@@ -12360,7 +12372,7 @@ html body {
 .contact-intro--descr {
   font-size: small;
 }
-.contact-intro--social-icons img {
+.contact-intro--social-icons i {
   max-height: 30px;
   width: 100%;
 }
@@ -12425,7 +12437,18 @@ html body {
 .info img {
   max-width: 100%;
   height: 250px;
+  animation: grow-right 7s backwards ease-in-out, fade-in 7s 8s backwards;
+  animation-timeline: view();
+  animation-range: entry 30% cover 30%;
 }
+.info p {
+  animation: grow-left 7s backwards ease-in-out, fade-in 7s 8s backwards;
+  animation-timeline: view();
+  animation-range: entry 30% cover 30%;
+  border-top: 1px solid #00b7ff;
+  border-bottom: 1px solid #00b7ff;
+}
+
 /*!
  * Bootstrap Icons v1.11.3 (https://icons.getbootstrap.com/)
  * Copyright 2019-2024 The Bootstrap Authors
