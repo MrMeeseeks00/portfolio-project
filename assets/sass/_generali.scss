@@ -33,7 +33,7 @@ $dark: black;
     margin: 0 auto;
 }
 
-//linea che divide sezioni
+//linea che divide sezioni da metter su &::before
 @mixin section-divider() {
     content: '';
     position: absolute; //mettere parent position: relative;

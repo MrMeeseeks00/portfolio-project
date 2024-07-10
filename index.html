@@ -24,7 +24,7 @@
             <div class="navbar-links">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#home">Info</a>
+                        <a class="nav-link" aria-current="page" href="#info">Info</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">Progetti</a>
@@ -42,33 +42,43 @@
                                     INTRO SECTION
      ------------------------------------------------------------------------------------------>
 
-    <section id="home" class="intro-section px-5 pb-5 mb-4 mx-auto">
+    <section id="home" class="intro-section px-5 mb-5 mx-auto">
         <div class="container py-5">
             <div class="row align-items-center justify-content-center py-5 mb-5">
-                <div class="col-md-6 intros">
+                <div class="intros my-5 pb-5">
                     <h1 class="display-2">
-                        <span class="display-2--intro" id="ciao">Ciao, sono Carli.</span>
-                        <span class="display-2--intro2">Full Stack Web Developer operante nella città di Milano</span>
-                        <span class="display-2--descrizione py-3">
-                            Sono entusiasta di portare la mia passione e le mie competenze nel vostro team per
-                            contribuire a progetti entusiasmanti e di successo.
-                        </span>
+                        <h4 class="display-2--intro text-center" id="ciao">Ciao, sono...<br><span
+                                class="poppins-bold">Greg Carli Fandialan</span></h4>
+                        <span class="display-2--intro2 text-center">Full Stack Web Developer, Milano</span>
                     </h1>
-                    <a href="/pagine/info.html">
-                        <button class="btn px-4" id="info-btn"> Più informazioni
-                            <span>
-                                <i class="bi bi-arrow-right-short"></i>
-                            </span>
-                        </button>
-                    </a>
-
-                </div>
-                <div class="col-md-6 d-flex align-items-center justify-content-center my-5">
-                    <img src="assets/img/gintoki.jpg" alt="Nessuna Immagine"
-                        class="img-fluid responsive-img mia-immagine">
+                    <div class="intros-social my-5 d-flex justify-content-start align-items-center gap-5">
+                            <div class="intros-social-icons">
+                                <a href="https://www.instagram.com/greg_carli.f/">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="intros-social-icons">
+                                <a href="https://github.com/MrMeeseeks00">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+                            <div class="intros-social-icons">
+                                <a href="https://it.linkedin.com/">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
                 </div>
             </div>
+            <a href="#info" class="pb-5 mb-5">
+                <button class="btn px-4" id="info-btn"> Più informazioni
+                    <span>
+                        <i class="bi bi-arrow-right-short"></i>
+                    </span>
+                </button>
+            </a>
         </div>
+
     </section>
 
     <!------------------------------------------------------------------------------------------------
@@ -150,7 +160,7 @@
 
             <div class="row project-row g-1 my-5">
                 <div class="col-md-6 justify-content-center align-items-center project-image ">
-                    <img src="assets/img/gintoki.jpg" alt="Immagine progetto" class="img-fluid responsive-image img-p">
+                    <img src="assets/img/projects/landing-page.png" alt="Immagine progetto" class="img-fluid responsive-image img-p">
                 </div>
                 <div id="project-content-1" class="col-md-6 project-content p-3 text-start">
                     <h3 class="project-content--title poppins-semibold"><span class="title-1">Landing Page</span></h3>
@@ -160,11 +170,9 @@
                     <div class="project-content--tools">
                         <img src="assets/img/skills/icons8-html-5-48.png" alt="" class="img-fluid responsive-img">
                         <img src="assets/img/skills/icons8-css-48.png" alt="" class="img-fluid responsive-img">
-                        <!--                             <img src="assets/img/skills/icons8-javascript-48.png" alt=""
-                                class="img-fluid responsive-img"> -->
                     </div>
                     <div class="project-content--links">
-                        <a href="https://google.com" class=""><button class="btn">Github</button></a>
+                        <a href="https://github.com/MrMeeseeks00/intro-project" class=""><button class="btn">Github</button></a>
                     </div>
                 </div>
             </div>
@@ -225,6 +233,36 @@
         </div>
     </section>
 
+    <!-------------------------------------------------------------------------------------------------------------------
+                                    INFO
+    --------------------------------------------------------------------------------------------------------------------->
+
+    <section id="info" class="info">
+        <div class="wrapper my-2 py-3">
+            <div class="info-title">
+                <h2 class="">CHI SONO</h2>
+                <!-- <span class="cursor">&nbsp;</span> -->
+            </div>
+        </div>
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <img src="/assets/img/gintoki.jpg" alt="" class="img-fluid responsive-img">
+                </div>
+                <div class="col-md-6 text-start py-5">
+                    <p class="poppins-regular py-3">Sono un Fullstack web developer operante nella città di Milano.<br><br>
+                        Adoro programmare scrivendo codice in modo ordinato, pulito ed efficiente. Mi diverto a
+                        costruire siti ed applicazioni web responsive e (possibilmente) intuitivi!<br>Ho sviluppato le
+                        mie competenze grazie a start2impact mentre lavoravo come operatore back office nel settore
+                        della liquidazione assicurativa.<br><br>Oltre al coding, amo guardare anime, leggere manga ed
+                        allenarmi in palestra.<br><br>Sono entusiasta di portare la mia passione e le mie competenze nel
+                        vostro team per contribuire a progetti entusiasmanti e di successo.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-----------------------------------------------------------------------------------------------------------------------------
                                         CONTATTO
     ----------------------------------------------------------------------------------------------------------------------------->
@@ -240,17 +278,17 @@
                         <div
                             class="contact-intro--social my-3 px-4 d-flex justify-content-start align-items-center gap-5">
                             <div class="contact-intro--social-icons">
-                                <a href="">
+                                <a href="https://www.instagram.com/greg_carli.f/">
                                     <i class="bi bi-instagram"></i>
                                 </a>
                             </div>
                             <div class="contact-intro--social-icons">
-                                <a href="">
+                                <a href="https://github.com/MrMeeseeks00">
                                     <i class="bi bi-github"></i>
                                 </a>
                             </div>
                             <div class="contact-intro--social-icons">
-                                <a href="">
+                                <a href="https://it.linkedin.com/">
                                     <i class="bi bi-linkedin"></i>
                                 </a>
                             </div>
