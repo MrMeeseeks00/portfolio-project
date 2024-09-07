@@ -1,37 +1,32 @@
 .contact {
-    @include set-background-and-text (darken($primary,40%));
-    border-radius: 2px;
+  @include set-background-and-text(darken($primary, 40%));
+  border-radius: 2px;
 
-
-    &-intro {
-/*         &--title {
-
-        } */
-        &--descr {
-            font-size: small;
-        }
-        &--social {
-            &-icons {
-                i {
-                    max-height: 30px;
-                    width: 100%;
-                }
-            }
-        }
+  &-intro {
+    &--descr {
+      font-size: small;
     }
-
-    &-form {
-        &--casella {
-            margin: 8px 4px;
-            width: 90%;
+    &--social {
+      &-icons {
+        i {
+          max-height: 30px;
+          width: 100%;
         }
-        &--button {
-            width: 25%;
-
-        }
+      }
     }
+  }
 
-    .hidden {
-        display: none;
+  &-form {
+    &--casella {
+      margin: 8px 4px;
+      width: 90%;
     }
+    &--button {
+      width: 25%;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
 }
