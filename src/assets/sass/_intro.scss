@@ -1,77 +1,60 @@
 .intro-section {
-    @include set-background-and-text($dark);
-    position: relative;
-    font-family: "Poppins", sans-serif;
-    padding-bottom: 250px;
+  @include set-background-and-text($dark);
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 250px;
 
-    &::before {
-        @include section-divider;
-    }
+  &::before {
+    @include section-divider;
+  }
 
-    .intros {
-        .display-2 {
+  .intros {
+    .display-2 {
+      &--intro {
+        font-size: 30px;
+        display: block;
+        font-weight: 700;
+        animation: fade-in 4.5s;
 
-            &--intro {
-                font-size: 30px;
-                display: block;
-                font-weight: 700;
-                animation: fade-in 4.5s;
+        span {
+          font-size: 50px;
+          color: $primary;
 
-                span {
-                    font-size: 50px;
-                    color: $primary;
-
-                    @media (min-width: 767px) {
-                        font-size: 60px;
-                    }
-                }
-            }
-
-
-            &--intro2 {
-                font-size: 20px;
-                display: block;
-                font-weight: 350;
-                animation: fade-in 4s 2s backwards;
-            }
-
-            &--descrizione {
-                font-size: small;
-                display: block;
-                animation: fade-in 3s 4s both;
-            }
-
+          @media (min-width: 767px) {
+            font-size: 60px;
+          }
         }
+      }
 
-        &-social {
-            padding-left: 10px;
-            &-icons {
-                i {
-                    max-height: 30px;
-                    width: 100%;
-                    color: $primary;
-                    animation: fade-in 3s 4.5s both;
-                }
-            }
+      &--intro2 {
+        font-size: 20px;
+        display: block;
+        font-weight: 350;
+        animation: fade-in 4s 2s backwards;
+      }
+
+      &--descrizione {
+        font-size: small;
+        display: block;
+        animation: fade-in 3s 4s both;
+      }
+    }
+
+    &-social {
+      padding-left: 10px;
+      &-icons {
+        i {
+          max-height: 30px;
+          width: 100%;
+          color: $primary;
+          animation: fade-in 3s 4.5s both;
         }
-
+      }
     }
+  }
 
-
-
-
-    #info-btn {
-        animation: grow-left 3s 4s backwards, fade-in 3s 4s backwards;
-        float: right;
-    }
-
-    /*     .mia-immagine {
-        max-width: 100%;
-        max-height: 200px;
-        animation: slide-left 3s 4s backwards, fade-in 3s 4s backwards;
-
-    } */
-
-
-
+  #info-btn {
+    animation: grow-left 3s 4s backwards, fade-in 3s 4s backwards;
+    float: right;
+  }
 }

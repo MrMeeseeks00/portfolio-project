@@ -1,208 +1,197 @@
 .project {
+  text-align: center;
+  position: relative;
+
+  &::before {
+    @include section-divider;
+  }
+
+  .wrapper {
+    display: inline-block;
     text-align: center;
-    position: relative;
+    font-family: "Poppins", sans-serif;
+  }
 
-    &::before {
-        @include section-divider;
+  .container {
+    @include center-section;
+  }
+
+  &-title {
+    overflow: hidden;
+    @include set-background-and-text($dark);
+    white-space: nowrap;
+    margin: 0 auto;
+    display: inline-block;
+    animation: typing 1.5s steps(7), fade-in 4s backwards;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+
+    h2 {
+      margin-bottom: 0;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 32px;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+    }
+  }
+
+  &-image {
+    text-align: center;
+    background-color: $semi-trasparent;
+    animation: grow-right 7s backwards ease-in-out, fade-in 7s 8s backwards;
+    animation-timeline: view();
+    animation-range: entry 50% cover 45%;
+
+    .img-p {
+      max-height: 300px;
+      width: auto;
+      max-width: 100%;
+      border-radius: 2%;
+      margin-top: 10px;
+    }
+  }
+
+  &-content {
+    @include set-background-and-text($dark);
+    border-radius: 1%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    row-gap: 10%;
+    animation: grow-left 7s backwards ease-in-out, fade-in 7s 8s backwards;
+    animation-timeline: view();
+    animation-range: entry 50% cover 45%;
+
+    &--title {
+      margin: 12px auto;
+      padding-bottom: 2px;
+      text-transform: uppercase;
+
+      .title-1 {
+        color: darken($secondary, 10%);
+      }
+
+      .title-2 {
+        color: darken($tertiary, 10%);
+      }
+
+      .title-3 {
+        color: darken($quaternary, 10%);
+      }
     }
 
-
-    .wrapper {
-        display: inline-block;
-        text-align: center;
-        font-family: 'Poppins', sans-serif;
-
+    &--description {
+      margin: 12px auto;
+      font-size: small;
     }
 
-    .container {
-        @include center-section
+    h6 {
+      margin: 12px auto;
     }
 
-    &-title {
-        overflow: hidden;
+    &--tools {
+      margin: 12px auto;
+
+      img {
+        max-height: 30px;
+        max-width: 100%;
+      }
+    }
+
+    &--links {
+      .btn {
         @include set-background-and-text($dark);
-        /* border-right: 0.15em solid $secondary; */
-        white-space: nowrap;
-        margin: 0 auto;
-        display: inline-block;
-        animation: typing 1.5s steps(7),
-            /* cursor-blink 0.7s step-end infinite */
-            fade-in 4s backwards;
-        animation-timeline: view();
-        animation-range: entry 50% cover 50%;
+        border: 0.015rem solid #fff;
+        transition: opacity 0.2s ease-in-out;
+        text-transform: uppercase;
 
-        h2 {
-            margin-bottom: 0;
-            /*color: $secondary; */
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            font-size: 32px;
-            letter-spacing: 0.2em;
-            font-weight: 600;
+        &:hover {
+          @include set-background-and-text($dark);
+          opacity: 85%;
+          border: 0.015rem solid #fff;
         }
+      }
     }
+  }
 
-    &-image {
-        text-align: center;
-        background-color: $semi-trasparent;
-        animation: grow-right 7s backwards ease-in-out, fade-in 7s 8s backwards;
-        animation-timeline: view();
-        animation-range: entry 50% cover 45%;
+  #project-content-1 {
+    border-color: $secondary;
 
-        .img-p {
-            max-height: 300px;
-            width: auto;
-            max-width: 100%;
-            border-radius: 2%;
-            margin-top: 10px;
-        }
+    .btn {
+      &:hover {
+        width: 25%;
+        letter-spacing: 0.5px;
+        color: $secondary;
+        border: 0.015rem solid $secondary;
+      }
     }
+  }
 
+  #project-content-2 {
+    border-color: $tertiary;
 
+    .btn {
+      &:hover {
+        width: 25%;
+        letter-spacing: 0.5px;
+        color: $tertiary;
+        border: 0.015rem solid $tertiary;
+      }
+    }
+  }
 
-    &-content {
-        @include set-background-and-text ($dark);
-        border-radius: 1%;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        row-gap: 10%;
+  #project-content-3 {
+    border-color: $quaternary;
+
+    .btn {
+      &:hover {
+        width: 25%;
+        letter-spacing: 0.5px;
+        color: $quaternary;
+        border: 0.015rem solid $quaternary;
+      }
+    }
+  }
+
+  @media (min-width: 767px) {
+    .second-row {
+      .project-image {
         animation: grow-left 7s backwards ease-in-out, fade-in 7s 8s backwards;
         animation-timeline: view();
         animation-range: entry 50% cover 45%;
+      }
 
-        &--title {
-            margin: 12px auto;
-            padding-bottom: 2px;
-            text-transform: uppercase;
-
-            .title-1 {
-                color: darken($secondary, 10%);
-            }
-
-            .title-2 {
-                color: darken($tertiary, 10%);
-            }
-
-            .title-3 {
-                color: darken($quaternary, 10%);
-            }
-
-        }
-
-        &--description {
-            margin: 12px auto;
-            font-size: small;
-        }
-
-        h6 {
-            margin: 12px auto;
-        }
-
-        &--tools {
-            margin: 12px auto;
-
-            img {
-                max-height: 30px;
-                max-width: 100%;
-            }
-        }
-
-        &--links {
-            .btn {
-                @include set-background-and-text($dark);
-                border: 0.015rem solid #fff;
-                transition: opacity 0.2s ease-in-out;
-                text-transform: uppercase;
-
-                &:hover {
-                    @include set-background-and-text($dark);
-                    opacity: 85%;
-                    border: 0.015rem solid #fff;
-                }
-            }
-        }
-    }
-
-    #project-content-1 {
-        border-color: $secondary;
-
-        .btn {
-            &:hover {
-                width: 25%;
-                letter-spacing: 0.5px;
-                color: $secondary;
-                border: 0.015rem solid $secondary;
-            }
-        }
-    }
-
-    #project-content-2 {
-        border-color: $tertiary;
-
-        .btn {
-            &:hover {
-                width: 25%;
-                letter-spacing: 0.5px;
-                color: $tertiary;
-                border: 0.015rem solid $tertiary;
-            }
-        }
-    }
-
-    #project-content-3 {
-        border-color: $quaternary;
-
-        .btn {
-            &:hover {
-                width: 25%;
-                letter-spacing: 0.5px;
-                color: $quaternary;
-                border: 0.015rem solid $quaternary;
-            }
-        }
-    }
-
-
-    @media (min-width: 767px) {
-        .second-row {
-            .project-image {
-                animation: grow-left 7s backwards ease-in-out, fade-in 7s 8s backwards;
-                animation-timeline: view();
-                animation-range: entry 50% cover 45%;
-            }
-
-            .project-content {
-                animation: grow-right 7s backwards ease-in-out, fade-in 7s 8s backwards;
-                animation-timeline: view();
-                animation-range: entry 50% cover 45%;
-            }
-        }
-    }
-
-    &-viewAll {
-        animation: appear-b 0.1s backwards, fade-in 5s 5s backwards;
+      .project-content {
+        animation: grow-right 7s backwards ease-in-out, fade-in 7s 8s backwards;
         animation-timeline: view();
-        animation-range: entry 50% cover 20%;
-
-        &-btn {
-            @include set-background-and-text(darken($primary, 20%));
-            border: 0.015rem solid #fff;
-            transition: opacity 0.2s ease-in-out;
-
-            &:hover {
-                @include set-background-and-text(darken($primary, 20%));
-                opacity: 85%;
-                border: 0.015rem solid #fff;
-            }
-
-        }
-
-        @media (max-width: 800px) {
-            &-btn {
-                width: auto;
-                font-size: 2vw;
-            }
-        }
+        animation-range: entry 50% cover 45%;
+      }
     }
+  }
+
+  &-viewAll {
+    animation: appear-b 0.1s backwards, fade-in 5s 5s backwards;
+    animation-timeline: view();
+    animation-range: entry 50% cover 20%;
+
+    &-btn {
+      @include set-background-and-text(darken($primary, 20%));
+      border: 0.015rem solid #fff;
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover {
+        @include set-background-and-text(darken($primary, 20%));
+        opacity: 85%;
+        border: 0.015rem solid #fff;
+      }
+    }
+
+    @media (max-width: 800px) {
+      &-btn {
+        width: auto;
+        font-size: 2vw;
+      }
+    }
+  }
 }

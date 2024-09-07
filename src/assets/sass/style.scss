@@ -1,22 +1,11 @@
+@import "generali";
+@import "buttons";
+@import "animations";
+@import "typography";
 
-
-
-@import '../../../nodeModules/bootstrap/scss/bootstrap.scss';
-@import 'generali';
-@import 'buttons';
-@import 'animations';
-@import 'typography';
-
-@import 'navbar';
-@import 'intro';
-@import 'skills';
-@import 'progetti';
-@import 'contact';
-@import 'info';
-
-@import '../../../nodeModules/bootstrap-icons/font/bootstrap-icons.css';
-@import '../../../nodeModules/bootstrap-icons/font/bootstrap-icons.scss';
-
-
-
-
+@import "navbar";
+@import "intro";
+@import "skills";
+@import "progetti";
+@import "contact";
+@import "info";
