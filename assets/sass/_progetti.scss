@@ -43,14 +43,24 @@
     animation: grow-right 7s backwards ease-in-out, fade-in 7s 8s backwards;
     animation-timeline: view();
     animation-range: entry 50% cover 45%;
+    overflow-x: hidden;
+    display: flex;
+
 
     .img-p {
-      max-height: 300px;
+      /* max-height: 300px;
       width: auto;
+      max-width: 100%; */
       max-width: 100%;
+      height: auto;
+      display: block;
       border-radius: 2%;
       margin-top: 10px;
     }
+  }
+
+  #no-animation{
+    animation: none;
   }
 
   &-content {

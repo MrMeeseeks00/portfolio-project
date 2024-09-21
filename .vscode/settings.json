@@ -1,5 +1,26 @@
 {
-    "liveServer.settings.port": 5501,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-}
+    "workbench.colorTheme": "Default Dark+",
+    "files.exclude": {
+      "**/.git": false
+    },
+    "liveSassCompile.settings.formats": [
+      {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "assets/css/"
+      }
+      /*  {
+              "format": "expanded",
+              "extensionName": ".css",
+              "savePath": "/css",
+              "savePathReplacementPairs": null
+          } */
+    ],
+    "editor.wordWrap": "on",
+    "liveSassCompile.settings.autoprefix": [
+      
+  
+  
+    ],
+    "liveServer.settings.donotShowInfoMsg": true
+  }
